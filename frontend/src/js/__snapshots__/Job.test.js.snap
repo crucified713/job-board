@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Job renders correctly 1`] = `
+<article>
+  <h5
+    className="jobs__title"
+    onClick={[Function]}
+  >
+    + Admin
+  </h5>
+  <div
+    className="jobs__collapse "
+  >
+    <p>
+      <small>
+        <strong>
+          Location: 
+        </strong>
+        Melbourne
+      </small>
+    </p>
+    <br />
+    <p>
+      Some description
+    </p>
+    <br />
+  </div>
+</article>
+`;
+
+exports[`renders correctly 1`] = `
+<article>
+  <h5
+    className="jobs__title"
+    onClick={[Function]}
+  >
+    + Admin
+  </h5>
+  <div
+    className="jobs__collapse "
+  >
+    <p>
+      <small>
+        <strong>
+          Location: 
+        </strong>
+        Melbourne
+      </small>
+    </p>
+    <br />
+    <p>
+      Some description
+    </p>
+    <br />
+  </div>
+</article>
+`;

@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`New Job should renders correctly 1`] = `
+<form
+  className="jobs__form"
+  onSubmit={[Function]}
+>
+  <h5
+    className="text-center"
+  >
+     Post New Job
+  </h5>
+  <div
+    className="form-group"
+  >
+    <label
+      className="required"
+      htmlFor="job-title"
+    >
+      Tilte
+    </label>
+    <input
+      className="form-control"
+      id="job-title"
+      name="title"
+      onChange={[Function]}
+      placeholder="eg. Administrator"
+      required={true}
+    />
+  </div>
+  <div
+    className="form-group"
+  >
+    <label
+      htmlFor="job-location"
+    >
+      Location
+    </label>
+    <input
+      className="form-control"
+      id="job-location"
+      name="location"
+      onChange={[Function]}
+      placeholder="eg. Melbourne"
+    />
+  </div>
+  <div
+    className="form-group"
+  >
+    <label
+      htmlFor="job-location"
+    >
+      Description
+    </label>
+    <textarea
+      className="form-control"
+      id="job-location"
+      name="description"
+      onChange={[Function]}
+      placeholder="Please type description here..."
+    />
+  </div>
+  <div
+    className="text-right"
+  >
+    <button
+      className="btn btn-primary"
+      disabled="disabled"
+      type="submit"
+    >
+      Post
+    </button>
+  </div>
+</form>
+`;

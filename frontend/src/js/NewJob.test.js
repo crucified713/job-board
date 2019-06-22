@@ -1,17 +1,18 @@
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 configure({ adapter: new Adapter() });
-
 import React from 'react';
+import ReactDOM from 'react-dom';
 import NewJob from './NewJob';
-import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 
 
 describe('New Job', function () {
-  it('should renders correctly', () => {
-    const tree = renderer.create(<NewJob />).toJSON();
-    expect(tree).toMatchSnapshot();
+
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<NewJob />, div);
+    ReactDOM.unmountComponentAtNode(div);
   });
 
   it('should update state with changed input value', function() {

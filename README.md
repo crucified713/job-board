@@ -5,6 +5,7 @@
 * Run: `docker-compose up`
 * Setup .env file (e.g. Rename ./backend/.env.example file to .env)
 * run `docker-compose exec coding-challenge-backend php artisan migrate`
+* run `docker-compose exec coding-challenge-backend php artisan db:seed`
 * Go to http://localhost and start to use App
 
 ## Setup

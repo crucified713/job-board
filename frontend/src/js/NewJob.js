@@ -26,8 +26,16 @@ class NewJob extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    if (this.state.title.length !== '')
+    if (this.state.title.length !== '') {
       this.props.toCreateNewJob(this.state);
+      alert("Job posted successfully!");
+      this.setState({
+        title: '',
+        location: '',
+        description: ''
+      });
+    }
+      
   }
 
   render() {
@@ -37,17 +45,17 @@ class NewJob extends Component {
           <h5 className="text-center"> Post New Job</h5 >
           <div className="form-group">
             <label htmlFor="job-title" className="required">Tilte</label>
-            <input className="form-control" name="title" id="job-title" placeholder="eg. Administrator" onChange={this.handleInputChange} required />
+            <input className="form-control" name="title" id="job-title" placeholder="eg. Administrator" onChange={this.handleInputChange} value={this.state.title} required />
           </div>
 
           <div className="form-group">
             <label htmlFor="job-location">Location</label>
-            <input className="form-control" name="location" id="job-location" placeholder="eg. Melbourne" onChange={this.handleInputChange} />
+            <input className="form-control" name="location" id="job-location" placeholder="eg. Melbourne" onChange={this.handleInputChange} value={this.state.location}/>
           </div>
 
           <div className="form-group">
             <label htmlFor="job-location">Description</label>
-            <textarea className="form-control" name="description" id="job-location" placeholder="Please type description here..." onChange={this.handleInputChange} ></textarea>
+            <textarea className="form-control" name="description" id="job-location" placeholder="Please type description here..." onChange={this.handleInputChange} value={this.state.description}></textarea>
           </div>
           <div className="text-right">
             <button disabled={this.state.title.length === 0 ? 'disabled' : false} type="submit" className="btn btn-primary">Post</button>

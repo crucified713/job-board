@@ -14,3 +14,10 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->group(['prefix' => 'api'], function () use ($router) {
+    $router->get('jobs', ['uses' => 'JobController@showAllJobs']);
+    $router->get('jobs/{id}', ['uses' => 'JobController@showJob']);
+    $router->post('jobs', ['uses' => 'JobController@create']);
+    $router->delete('jobs/{id}', ['uses' => 'JobController@delete']);
+});

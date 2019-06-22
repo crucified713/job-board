@@ -1,0 +1,22 @@
+.jobs {
+  &__form {
+    border-radius: 5px;
+    padding: 2em 1em;
+    background-color: $light-grey;
+  }
+  &__title {
+    &:hover {    
+      cursor: pointer;
+    }
+  }
+  &__collapse {
+    overflow-y: hidden;
+    max-height: 0;
+    transition: max-height .15s 0s;
+  
+    &--show {
+      max-height: 9999px;
+      transition: max-height .15s 0s;
+    }
+  }
+}
